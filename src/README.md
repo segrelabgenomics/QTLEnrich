@@ -607,9 +607,9 @@ If user is comparing two outputs from **QTLEnrich**:
 
 * --bar_box_violin_option: Options include: 'pi1\_trait', which plots number of trait associations based on an empirical Pi1; 'pi1', which plots the empirical Pi1 rate; 'adjusted\_fold', which plots adjusted fold-enrichment (default: pi1\_trait)
 
-* --label_file1: Label for first QTLEnrich output file (e.g., eQTL). If label is more than one word, e.g. Type 2 Diabetes, please add quotes to variable or string in shell script (default: "QTL type 1"):
+* ``--label_file1``: Label for first QTLEnrich output file (e.g., eQTL). If label is more than one word, e.g. Type 2 Diabetes, please add quotes to variable or string in shell script (default: "QTL type 1"):
 
-	./forest_boxplot_module.R --label_file1 "Type 2 Diabetes"        
+    ./forest_boxplot_module.R --label_file1 "Type 2 Diabetes"        
 
 * --label_file2: Label for second QTLEnrich output file (e.g., sQTL). For format of input, please see \-\-label\_file1 (default: "QTL type 2")
 
