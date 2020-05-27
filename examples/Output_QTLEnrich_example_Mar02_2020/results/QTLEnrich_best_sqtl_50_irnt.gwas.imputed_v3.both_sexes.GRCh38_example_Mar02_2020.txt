@@ -1,0 +1,2 @@
+Trait_(GWAS)	Tissue_(QTL)	Num_QTL_variants	Num_QTL_variants_in_GWAS	Num_OBS_QTLs_with_GWAS_p<0.05	Num_EXP_QTLs_with_GWAS_p<0.05	Estimated_num_trait_associations_with_GWAS_p<0.05	Empirical_Pi1	Estimated_total_num_trait_associations	Fold-Enrichment_(OBS/EXP)	Adjusted_Fold_Enrichment	Lower_bound_95%_CI	Upper_bound_95%_CI	Enrichment_P_value
+50_irnt.gwas.imputed_v3.both_sexes.GRCh38	Whole_Blood	2649	2422	925	474	450	0.3265	791	7.6446	1.949	1.8054	2.1049	9.90e-6

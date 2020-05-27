@@ -1,0 +1,61 @@
+This README contains a description of the headers for all QTLEnrich output files.
+
+The code used to generate the files described here is publicly available: <github link>.
+
+For questions or comments regarding this tool, please contact Andrew Hamel,andrew_hamel@meei.harvard.edu, and Ayellet Segre at ayellet_segre@meei.harvard.edu
+
+#main results table
+QTLEnrich_{qtl_type}_{trait_name}_{exp_label}_{date}.tsv
+================
+
+Trait_(GWAS)						string			Trait identifier; GWAS file
+Tissue_(QTL)						string			Tissue identifer
+Num_QTL_variants					integer			Number of significant variants for a given tissue
+Num_QTL_variants_in_GWAS				integer			Number of significant variants for a given tissue found in GWAS
+Num_OBS_QTLs_with_GWAS_p<0.05				integer			Number of significant variants with a GWAS p-value below 0.05
+Num_EXP_QTLs_with_GWAS_p<0.05				integer			Estimated number of significant variants with a GWAS p-value below 0.05 based on the adjusted fold-enrichment
+Estimated_num_trait_associations_with_GWAS_p<0.05	integer			Estimated number of true-trait associations with GWAS p-value below 0.05 based on adjusted fold-enrichment	
+Empirical_Pi1						float			Empirical Pi1 (true-positive) rate
+Estimated_total_num_trait_associations			integer			Estimated number of true-trait associations based on empirical Pi1
+Fold-Enrichment_(OBS/EXP)				float			Fold-enrichment for a tissue-trait pair, defined as the ratio of observed QTls to expected number of QTLs 
+										(assuming a uniform distribution)
+Adjusted_Fold_Enrichment				float			Adjusted fold-enrichment, defined as the observed fold-enrichment divided by the median of the fold-enrichments of the
+										matched-null variants from the first 1000 permutations
+Lower_bound_95%_CI					float			Lower bound for the 95% confidence interval for the adjusted fold-enrichment	      
+Upper_bound_95%_CI					float			Upper bound for the 95% confidence interval for the adjusted fold-enrichment      
+Enrichment_P_value					float			Enrichment p-value
+
+
+#GWAS p-values of significant QTLs (p-values)
+QTLEnrich_significant_gwas_p_values_{qtl_type}_{trait_name}_{tissue}_{date}.tsv
+================
+
+variant         string    significant QTL in the form chrN_pos_ref_alt_b38
+gwas_p_value    float     gwas p-value for the significant QTL
+
+
+#variant IDs of N permuted null variants matched on confounding factors with each significant variant (variant IDs)
+QTLEnrich_null_variant_id_matrix_{qtl_type}_{trait_name}_{tissue}_{date}.tsv
+================
+
+significant_variant_id	string	significant variant for a given tissue-trait pair in the form chrN_pos_ref_alt_b38
+P1                      string	matched null variant ids in the form chrN_pos_ref_alt_b38 for the 1st permutation
+.
+.
+.
+P1000                   string	matched null variant ids in the form chrN_pos_ref_alt_b38 for the Nth permutation
+
+#GWAS p-values of matched null variants in the table above (p-values)
+QTLEnrich_matched_null_gwas_p_values_{qtl_type}_{trait_name}_{tissue}_{date}.tsv
+================
+
+significant_variant_id	string	significant variant for a given tissue-trait pair in the form chrN_pos_ref_alt_b38
+P1                      float	gwas p-value for the matched null variant id in the form chrN_pos_ref_alt_b38 for the 1st permutation
+.
+.
+.
+P1000                   float	gwas p-value for the matched null variant id in the form chrN_pos_ref_alt_b38 for the Nth permutation
+
+
+
+ 

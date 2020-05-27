@@ -1,0 +1,54 @@
+tissue_id	tissue_site_detail	tissue_abbrv	color_rgb	color_hex
+Adipose_Subcutaneous	Adipose - Subcutaneous	ADPSBQ	255,102,0	FF6600
+Adipose_Visceral_Omentum	Adipose - Visceral (Omentum)	ADPVSC	255,170,0	FFAA00
+Adrenal_Gland	Adrenal Gland	ADRNLG	51,221,51	33DD33
+Artery_Aorta	Artery - Aorta	ARTAORT	255,85,85	FF5555
+Artery_Coronary	Artery - Coronary	ARTCRN	255,170,153	FFAA99
+Artery_Tibial	Artery - Tibial	ARTTBL	255,0,0	FF0000
+Bladder	Bladder	BLDDER	170,0,0	AA0000
+Brain_Amygdala	Brain - Amygdala	BRNAMY	238,238,0	EEEE00
+Brain_Anterior_cingulate_cortex_BA24	Brain - Anterior cingulate cortex (BA24)	BRNACC	238,238,0	EEEE00
+Brain_Caudate_basal_ganglia	Brain - Caudate (basal ganglia)	BRNCDT	238,238,0	EEEE00
+Brain_Cerebellar_Hemisphere	Brain - Cerebellar Hemisphere	BRNCHB	238,238,0	EEEE00
+Brain_Cerebellum	Brain - Cerebellum	BRNCHA	238,238,0	EEEE00
+Brain_Cortex	Brain - Cortex	BRNCTXA	238,238,0	EEEE00
+Brain_Frontal_Cortex_BA9	Brain - Frontal Cortex (BA9)	BRNCTXB	238,238,0	EEEE00
+Brain_Hippocampus	Brain - Hippocampus	BRNHPP	238,238,0	EEEE00
+Brain_Hypothalamus	Brain - Hypothalamus	BRNHPT	238,238,0	EEEE00
+Brain_Nucleus_accumbens_basal_ganglia	Brain - Nucleus accumbens (basal ganglia)	BRNNCC	238,238,0	EEEE00
+Brain_Putamen_basal_ganglia	Brain - Putamen (basal ganglia)	BRNPTM	238,238,0	EEEE00
+Brain_Spinal_cord_cervical_c-1	Brain - Spinal cord (cervical c-1)	BRNSPC	238,238,0	EEEE00
+Brain_Substantia_nigra	Brain - Substantia nigra	BRNSNG	238,238,0	EEEE00
+Breast_Mammary_Tissue	Breast - Mammary Tissue	BREAST	51,204,204	33CCCC
+Cells_EBV-transformed_lymphocytes	Cells - EBV-transformed lymphocytes	LCL	204,102,255	CC66FF
+Cells_Cultured_fibroblasts	Cells - Cultured fibroblasts	FIBRBLS	170,238,255	AAEEFF
+Cervix_Ectocervix	Cervix - Ectocervix	CVXECT	255,204,204	FFCCCC
+Cervix_Endocervix	Cervix - Endocervix	CVSEND	204,170,221	CCAADD
+Colon_Sigmoid	Colon - Sigmoid	CLNSGM	238,187,119	EEBB77
+Colon_Transverse	Colon - Transverse	CLNTRN	204,153,85	CC9955
+Esophagus_Gastroesophageal_Junction	Esophagus - Gastroesophageal Junction	ESPGEJ	139,115,85	8B7355
+Esophagus_Mucosa	Esophagus - Mucosa	ESPMCS	85,34,0	552200
+Esophagus_Muscularis	Esophagus - Muscularis	ESPMSL	187,153,136	BB9988
+Fallopian_Tube	Fallopian Tube	FLLPNT	255,204,204	FFCCCC
+Heart_Atrial_Appendage	Heart - Atrial Appendage	HRTAA	153,0,255	9900FF
+Heart_Left_Ventricle	Heart - Left Ventricle	HRTLV	102,0,153	660099
+Kidney_Cortex	Kidney - Cortex	KDNCTX	34,255,221	22FFDD
+Liver	Liver	LIVER	170,187,102	AABB66
+Lung	Lung	LUNG	153,255,0	99FF00
+Minor_Salivary_Gland	Minor Salivary Gland	SLVRYG	153,187,136	99BB88
+Muscle_Skeletal	Muscle - Skeletal	MSCLSK	170,170,255	AAAAFF
+Nerve_Tibial	Nerve - Tibial	NERVET	255,215,0	FFD700
+Ovary	Ovary	OVARY	255,170,255	FFAAFF
+Pancreas	Pancreas	PNCREAS	153,85,34	995522
+Pituitary	Pituitary	PTTARY	170,255,153	AAFF99
+Prostate	Prostate	PRSTTE	221,221,221	DDDDDD
+Skin_Not_Sun_Exposed_Suprapubic	Skin - Not Sun Exposed (Suprapubic)	SKINNS	0,0,255	0000FF
+Skin_Sun_Exposed_Lower_leg	Skin - Sun Exposed (Lower leg)	SKINS	119,119,255	7777FF
+Small_Intestine_Terminal_Ileum	Small Intestine - Terminal Ileum	SNTTRM	85,85,34	555522
+Spleen	Spleen	SPLEEN	119,136,85	778855
+Stomach	Stomach	STMACH	255,221,153	FFDD99
+Testis	Testis	TESTIS	170,170,170	AAAAAA
+Thyroid	Thyroid	THYROID	0,102,0	006600
+Uterus	Uterus	UTERUS	255,102,255	FF66FF
+Vagina	Vagina	VAGINA	255,85,153	FF5599
+Whole_Blood	Whole Blood	WHLBLD	255,0,187	FF00BB

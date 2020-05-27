@@ -1,24 +1,24 @@
 # QTLEnrich v2
-Assessing enrichment of complex disease or trait associations among QTLs
 
-This repository contains the software implementation of QTLEnrich (v2), which is a tool used to assess enrichment of GWAS variant associations for a given complex disease or trait among molecular quantitative trait loci (QTLs), such as expression QTLs (eQTLs) or splicing QTLs (sQTLs) in a given tissue, correcting for potential confounding factors (MAF, distance to TSS, local LD).
+**This repository contains the software implementation of QTLEnrich (v2)**, a tool that assesses enrichment of common variant associations for a given complex disease or trait among molecular quantitative trait loci (QTLs), including expression QTLs (eQTLs) and splicing QTLs (sQTLs) in a given tissue, correcting for potential confounding factors (MAF, distance to TSS, local LD).
 
-QTLEnrich (v2) is an extension of eQTLEnrich published in Gamazon, Segre et al., Nature Genetics (2018), 50(7):956-967, adapted for the increased discovery power in GTEx release v8 (genome build hg38) and additional QTL types. 
+QTLEnrich (v2) is an extension of eQTLEnrich published in Gamazon*, Segre*, van de Bunt*, et al., Nature Genetics (2018), 50(7):956-967, that accounts for increased discovery power of eQTLs in GTEx release v8 (Genome build hg38) and additional QTL types. The updated version of QTLEnrich are described in the GTEx v8 main paper: [GTEx consortium, BioRxiv 2019](https://www.biorxiv.org/content/10.1101/787903v1) (accepted to Science 2020), where we applied QTLEnrich to GWAS of 87 complex diseases and traits and eQTLs and sQTLs in 49 tissues. A methods paper is also under preparation.
 
-Authors: Andrew Hamel, John Rouhana, written in the Segre lab under the supervision of Ayellet Segre, Massachusetts Eye and Ear, Harvard Medical School, Boston, MA
+**Authors**: Andrew Hamel, John Rouhana, written in the Segre lab under the supervision of Ayellet Segre, Massachusetts Eye and Ear, Harvard Medical School, Boston, MA
 
-For questions or comments regarding this tool, please contact Andrew Hamel,andrew\_hamel at meei dot harvard dot edu, and Ayellet Segre at ayellet\_segre at meei dot harvard dot edu.
+For questions or comments regarding this tool, please contact Andrew Hamel at andrew\_hamel at meei dot harvard dot edu, and Ayellet Segre at ayellet\_segre at meei dot harvard dot edu.
+
+Date: January 8, 2020
 
 ## Repository structure
 
-`src`: the directory contains scripts for the software pipeline and for plotting with relevant instructions
+``src``: the directory contains scripts for the software pipeline and for plotting with relevant instructions
 
-`data`: the directory contains input files required to run QTLEnrich for GTEx v8 QTLs
+``data``: the directory contains input files required to run QTLEnrich for GTEx v8 QTLs
 
-`examples`: sample data for running QTLEnrich on a given trait and tissue pair
+``examples``: sample data for running QTLEnrich on a given trait and tissue pair
 
-
-## Dependencies 
+## Dependencies
 
 QTLEnrich was written in Python (at least 3.6) and R (at least 3.6.1) and requires the following libraries and modules:
 
@@ -29,19 +29,27 @@ QTLEnrich was written in Python (at least 3.6) and R (at least 3.6.1) and requir
   * [ggplot2 3.2.1](https://ggplot2.tidyverse.org)
   * [dplyr 0.8.3](https://dplyr.tidyverse.org)
   * [readr 1.3.1](https://readr.tidyverse.org)
+  * [cowplot 1.0.0](https://wilkelab.org/cowplot/index.html)
 
-## Step by step description of running QTLEnrich
+## Step by step description for running QTLEnrich
 
-Step by step description of running QTLEnrich, preprocessing input files, and plotting can be found in [src/README.md].
+Step by step description for running QTLEnrich, preprocessing input files, and plotting can be found in [src/README.md](https://github.com/segrelabgenomics/QTLEnrich/src/README.md). Instructions are centered on using GTEx v8 data, but can be applied to any non-GTEx QTL datasets.
 
-COMING VERY SOON!
+1. Compute LD proxy variants for QTL study variants using PLINK
+2. Prepare confounders and null tables
+3. Prepare GWAS input file/s for analysis
+4. Run QTLEnrich
+5. Generate plots as desired
 
 ## License
 
-The QTLEnrich software is distributed under the terms of the BSD 3-Clause License. See [LICENSE] (license.txt) file for more details.
+The QTLEnrich software is distributed under the terms of the BSD 3-Clause License. See [LICENSE.txt](https://github.com/segrelabgenomics/QTLEnrich/LICENSE.txt) file for more details.
 
 ## Citation
 
-Preprint coming soon on BioRxiv!
+GTEx Consortium, "The GTEx Consortium atlas of genetic regulatory effects across human tissues", BioRxiv 2019 (accepted at Science 2020) (https://www.biorxiv.org/content/10.1101/787903v1)
 
-Last updated: January 21, 2020
+Methods preprint in preparation, coming soon!
+
+Last updated: May 26, 2020
+

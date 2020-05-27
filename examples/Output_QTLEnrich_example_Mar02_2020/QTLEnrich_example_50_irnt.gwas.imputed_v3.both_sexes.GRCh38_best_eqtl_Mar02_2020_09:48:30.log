@@ -1,0 +1,58 @@
+QTLEnrich
+Mar02_2020_09:48:30
+
+Running QTLEnrich on the following arugments:
+--gwas_file	../examples/50_irnt.gwas.imputed_v3.both_sexes.GRCh38.tsv.gz
+--qtl_directory	../examples/
+--file_name	.v8.egenes.txt.gz
+--qtl_type	best_eqtl
+--confounders_table	../data/GTEx_v8_Confounders_Table_49Tiss_Global.txt.gz
+--null_table	../data/GTEx_V8_Null_Table_49Tiss_Global.txt.gz
+--subset_genes	True
+--compute_tss_distance	True
+--gencode_file	../data/GENCODE_26_df.txt
+--null_option	tissue_dependent
+--genome_build	b38
+--trait_name	
+--qtl_q_value	0.05
+--gwas_p_value	0.05
+--independent_ranking	1
+--lambda_factor	0.8
+--lower_bound_permutations	1000
+--upper_bound_permutations	100000
+--num_quantiles	10
+--subset_tissues	False
+--tissue_names	<class 'str'>
+--keep_null_variants	True
+--keep_pvalue_matrix	True
+--output_directory	
+--exp_label	example
+--GeneEnrich_input	False
+--eGenes_directory	
+--eGenes_file_name	
+
+Output and log files will be placed in /gpfs/fs1/home/ahamel/Projects/QTLEnrichV2/QTLEnrich_v2_software_package_Oct2019/Output_QTLEnrich_example_Mar02_2020/
+Preparing gwas
+Preparing confounders and null table...
+This may take a few minutes
+parsing qtls
+computing observed fold-enrichment
+Preparing data for permutations... This may take a few minutes.Tissue_Whole_BloodRunning with 1000 permutations for 8816 QTLs with an observed fold enrichment of 7.1156...
+Numbers align. No missing variants.
+--- 38.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 8816 QTLs with an observed fold enrichment of 7.1156...
+Numbers align. No missing variants.
+--- 51.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 8816 QTLs with an observed fold enrichment of 7.1156...
+Numbers align. No missing variants.
+--- 198.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 8816
+returning length of matrix: 8816
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Creating QTLEnrich output table. QTLEnrich is complete.
