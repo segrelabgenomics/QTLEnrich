@@ -551,7 +551,7 @@ If user is comparing two QTL outputs from **QTLEnrich** (e.g., eQTL and sQTL):
 
 * ``--label_file1``: Label for first QTLEnrich output file (e.g., eQTL). If label is more than one word, e.g. Type 2 Diabetes, please add quotes to variable or string in shell script (default: "QTL type 1"):
 
-``
+```
 ./forest_boxplot_module.R --label_file1 "Type 2 Diabetes"
 ```
 
