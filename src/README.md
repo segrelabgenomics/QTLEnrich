@@ -1,6 +1,6 @@
 # QTLEnrich v2
  
-**This repository contains the scripts and instructions for running QTLEnrich, a tool used to assess enrichment of GWAS variant associations among molecular quantitative trait loci (QTLs), such as expression QTLs (eQTLs) and splicing QTLs (sQTLs) in a given tissue, correcting for potential confounding factors (MAF, distance to TSS, local LD).**
+**This repository contains the scripts and instructions for running QTLEnrich, a tool used to assess enrichment of complex disease or trait associations among expression quantitative trait loci (eQTLs) or splicing QTLs (sQTLs) in a given tissue, correcting for potential confounding factors (MAF, distance to TSS, local LD).**
 
 **QTLEnrich (v2)** is an extension of eQTLEnrich published in Gamazon*, Segre* *et al., Nature Genetics (2018), 50(7):956-967, modified to account for the increased discovery power of eQTLs in GTEx release v8 (genome build hg38) and other QTL types. Updates of QTLEnrich v2 are described in the GTEx v8 main paper: [GTEx consortium, BioRxiv 2019](https://www.biorxiv.org/content/10.1101/787903v1) (accepted to Science 2020), where we applied **QTLEnrich** to GWAS of 87 complex diseases and traits and eQTLs and sQTLs in 49 tissues. A methods paper is also under preparation.
 
@@ -52,9 +52,9 @@ A sample command for running QTLEnrich.py on Standing Height GWAS from the UK Bi
 
 All required precomputed input files for running **QTLEnrich** on GTEx v8 QTLs, sQTLs, and independent eQTLs (as described in steps 2-6) are provided in the *data* directory.
 
-### A. Data preparation and pre-processing
+### A. Data preparation and preprocessing
 
-1. Download QTL results files 
+1. Download QTL results files and check in proper format
 2. Prepare Null variants table per tissue
 3. Compute LD proxy variants for all variants tested in QTL study
 4. Process GENCODE file
@@ -96,7 +96,8 @@ All other required input files for analyzing GTEx v8 QTLs, defined below (steps 
 A null table needs to be generated that defines which variants are non-significant eQTLs or sQTLs. We defined two types of null variant sets - tissue-dependent and global, if multiple tissues are considered. The tissue-dependent null sets contain one column per tissue (listed in header), with 1 representing a null variant, and 0 representing either a significant variant in the given tissue or a variant not tested in that tissue which may be a significant or non-significant QTL in any of the other tissues. The tissue names for the headers are extracted from the prefix of the QTL file names, thus the file name prefixes must contain the tissue name (see GTEx eQTL file names for example). The global null set is defined as all variants tested that are a non-significant variant-gene pair eQTL or sQTL in any of the tissues tested in the study (unique union of all tissue-dependent null variants).
 
 **For GTEx v8 eQTLs and sQTLs**, we defined both tissue-dependent and global null sets for the 49 tissues in GTEx v8: (i) (Default on **QTLEnrich**) Tissue-dependent null sets were defined per tissue as the subset of all variants within +/-1Mb around the TSS of all genes expressed in the given tissue, that are non-significant variant-gene pair eQTLs or sQTLs (FDR>5%) in any of the 49 tissues tested in GTEx v8. We defined tissue-dependent null sets for each of the 49 tissues. (i) The global null set was defined as all tested variants (+/-1Mb around all genes’ TSS) that are a non-significant variant-gene pair eQTL or sQTL (FDR>5%) in all of the 49 tissues tested.
-Null table for GTEs v8 *GTEx_v8_Null_Table_49Tiss_Global.txt.gz* can be downloaded from [here](http://segrelab.meei.harvard.edu/software), and should be saved in *data* directory.
+
+Null table for GTEx v8 **GTEx_v8_Null_Table_49Tiss_Global.txt.gz** can be downloaded from [here](http://segrelab.meei.harvard.edu/software), and should be saved in *data* directory.
 
 **The following scripts and commands were used to generate the null table:**
 
@@ -249,7 +250,8 @@ The processed GENCODE v26 file (GENCODE_26_df.txt) is saved in the *data* folder
 The confounders table includes annotations of 3 confounding factors for all variants (null and significant) that were tested for eQTL and sQTL significance (+/-1MB around TSS of all expressed genes), computed for each of the 49 tissues in GTEx v8 independently and globally. Confounding factors include minor allele frequency (MAF), minimum distance to TSS of all genes expressed in the given tissue (tissue-dependent) or across all tissues (global), and number of LD proxy variants at r2>0.5 (LD\_proxy). For the significant eQTLs or sQTLs, distance to TSS is re-computed in **QTLEnrich.py** considering only the eGenes with a significant QTL in the given tissue. MAF and distance to TSS were computed for each tissue, as they vary by sample set and by the set of genes expressed in each tissue (tissue name added to column header). TSS is computed as the variant position minus the TSS position in base pair units, and strand orientation of each gene was accounted for by multiplying the difference by -1 if the gene is on the negative strand (variant upstream of TSS: negative value; variant downstream of TSS: positive value).
 
 **We generated this confounders table for GTEx release v8 eQTLs and sQTLs** using GENCODE v26, saved in *data*. Number of LD proxy variants was computed using r2>0.5 and the European subset of samples in the WGS VCF of GTEx v8, and MAF was taken from the WGS VCF computed considering all 838 donors.
-Confounders table for GTEs v8 ** can be downloaded from [here](http://segrelab.meei.harvard.edu/software) and should be saved in *data* directory.
+
+Confounders table for GTEx v8 **GTEx_v8_Confounders_Table_49Tiss_Global.txt.gz** can be downloaded from [here](http://segrelab.meei.harvard.edu/software) and should be saved in *data* directory.
 
 **The following script and command can be used to generate the confounders table for a new QTL dataset.** Pre-requisites includes computing number of LD proxy variants in Step 3, processing the GENCODE GTF file in step 4, and inputting a table with all MAF for each variant. Also, the tissue names will be taken from the prefix of the QTL file names, hence the prefix of the QTL file name must contain the tissue name.
 
@@ -342,7 +344,7 @@ A sample input file is provided here: */data/Whole\_Blood.v8.egenes.txt.gz*.
 
 * ``--confounders_table``: The confounders table will include a list of all unique variants (null and significant) and their respective confounding factors for each of the tissues included in the QTL study, e.g., 49 tissues in GTEx release v8 ("tissue_dependent"), and considering genes expressed in at least one of the tissues ("global"). Confounding factors include minor allele frequency (MAF), distance to transcription start site (TSS), and number of LD proxy variants at r2>0.5 (LD\_proxy). MAF and distance to TSS are computed per tissue (tissue and name added to column header) and across all tissues ("Global", in which case minimum distance to TSS across all tissues is taken). Strand orientation was taken into consideration in calculating the distance to TSS, given in base pair units.
 
-We precomputed this file for GTEx release v8: **/data/GTEx_v8_Confounders_Table_49Tiss_Global.txt.gz**
+We precomputed this file for GTEx release v8: **GTEx_v8_Confounders_Table_49Tiss_Global.txt.gz**, which can be downloaded from [here](http://segrelab.meei.harvard.edu/software) and should be saved in *data* directory.
 
         variant_id              MAF_Whole_Blood TSS_Whole_Blood MAF_Liver  TSS_Liver      LD_proxy
         chr15_90160604_G_A_b38  0.272556        -57             0.282      123        7
@@ -350,7 +352,7 @@ We precomputed this file for GTEx release v8: **/data/GTEx_v8_Confounders_Table_
         chr1_153541765_A_C_b38  0.101504        100             0.123      87         5
           
 
-* ``--null_table``: Table that contains all variants tested in the QTL anlaysis and specifies which are null per tissue or globally. For example, the first variant below is a null variant only in Whole Blood, the second variant is a null variant only in Liver, and the third variant is null in both tissues. See Curation of Null Table in Section 2 above for more information.  We precomputed this file for GTEx release v8: /data/GTEx_v8_Null_Table_49Tiss_Global.txt.gz
+* ``--null_table``: Table that contains all variants tested in the QTL anlaysis and specifies which are null per tissue or globally. For example, the first variant below is a null variant only in Whole Blood, the second variant is a null variant only in Liver, and the third variant is null in both tissues. See Curation of Null Table in Section 2 above for more information.  We precomputed this file for GTEx release v8: GTEx_v8_Null_Table_49Tiss_Global.txt.gz, which can be downloaded from [here](http://segrelab.meei.harvard.edu/software), and should be saved in *data* directory.
 
         variant_id         Tissue_Whole_Blood Tissue_Liver  Global   
         chr15_90160604_G_A_b38  1        0               1          
@@ -607,9 +609,9 @@ If user is comparing two outputs from **QTLEnrich**:
 
 * --bar_box_violin_option: Options include: 'pi1\_trait', which plots number of trait associations based on an empirical Pi1; 'pi1', which plots the empirical Pi1 rate; 'adjusted\_fold', which plots adjusted fold-enrichment (default: pi1\_trait)
 
-* ``--label_file1``: Label for first QTLEnrich output file (e.g., eQTL). If label is more than one word, e.g. Type 2 Diabetes, please add quotes to variable or string in shell script (default: "QTL type 1"):
+* --label_file1: Label for first QTLEnrich output file (e.g., eQTL). If label is more than one word, e.g. Type 2 Diabetes, please add quotes to variable or string in shell script (default: "QTL type 1"):
 
-    ./forest_boxplot_module.R --label_file1 "Type 2 Diabetes"        
+	./forest_boxplot_module.R --label_file1 "Type 2 Diabetes"        
 
 * --label_file2: Label for second QTLEnrich output file (e.g., sQTL). For format of input, please see \-\-label\_file1 (default: "QTL type 2")
 
