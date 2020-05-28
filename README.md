@@ -1,10 +1,10 @@
 # QTLEnrich v2
 
-**This repository contains the software implementation of QTLEnrich (v2)**, a tool that assesses enrichment of common variant associations for a given complex disease or trait among exprssion quantitative trait loci (eQTLs) and splicing QTLs (sQTLs) in a given tissue, correcting for potential confounding factors (MAF, distance to TSS, local LD).
+**This repository contains the software implementation of QTLEnrich (v2)**, a tool that assesses enrichment of common variant associations for a given complex disease or trait among expression quantitative trait loci (eQTLs) and splicing QTLs (sQTLs) in a given tissue, correcting for potential confounding factors (MAF, distance to TSS, local LD).
 
 **QTLEnrich (v2)** is an extension of eQTLEnrich published in Gamazon*, Segre*, van de Bunt*, et al., Nature Genetics (2018), 50(7):956-967, that accounts for increased discovery power of eQTLs in GTEx release v8 (Genome build hg38) and additional QTL types. The updated version of QTLEnrich is described in the GTEx v8 main paper: [GTEx consortium, BioRxiv 2019](https://www.biorxiv.org/content/10.1101/787903v1) (provisionally accepted at Science 2020), where we applied QTLEnrich to GWAS of 87 complex diseases and traits and eQTLs and sQTLs in 49 tissues. A methods paper is also under preparation.
 
-**Authors**: Andrew Hamel, John Rouhana, written in the Segre lab under the supervision of Ayellet Segre, Massachusetts Eye and Ear, Harvard Medical School, Boston, MA
+**Authors**: Andrew Hamel, John Rouhana, written in the Segre lab under the guidance of Ayellet Segre, Massachusetts Eye and Ear, Harvard Medical School, Boston, MA
 
 For questions or comments regarding this tool, please contact Andrew Hamel at andrew\_hamel at meei dot harvard dot edu, and Ayellet Segre at ayellet\_segre at meei dot harvard dot edu.
 
