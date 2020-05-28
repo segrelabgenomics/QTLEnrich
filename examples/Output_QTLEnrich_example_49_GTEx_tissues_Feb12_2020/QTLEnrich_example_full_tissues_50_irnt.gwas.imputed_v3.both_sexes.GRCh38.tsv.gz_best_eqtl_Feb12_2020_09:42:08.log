@@ -1,0 +1,921 @@
+QTLEnrich
+Feb12_2020_09:42:08
+
+Running QTLEnrich on the following arugments:
+--gwas_file	../examples/50_irnt.gwas.imputed_v3.both_sexes.GRCh38.tsv.gz
+--qtl_directory	/data/Segre_Lab/data/GTEx/V8_release/eQTLs/GTEx_Analysis_v8_eQTL/
+--file_name	.v8.egenes.txt.gz
+--qtl_type	best_eqtl
+--confounders_table	../data/GTEx_v8_Confounders_Table_49Tiss_Global.txt.gz
+--null_table	../data/GTEx_V8_Null_Table_49Tiss_Global.txt.gz
+--subset_genes	True
+--compute_tss_distance	True
+--gencode_file	../data/GENCODE_26_df.txt
+--null_option	tissue_dependent
+--genome_build	b38
+--trait_name	
+--qtl_q_value	0.05
+--gwas_p_value	0.05
+--independent_ranking	1
+--lambda_factor	0.8
+--lower_bound_permutations	1000
+--upper_bound_permutations	100000
+--num_quantiles	10
+--subset_tissues	False
+--tissue_names	<class 'str'>
+--keep_null_variants	True
+--keep_pvalue_matrix	True
+--GeneEnrich_input	False
+--output_directory	
+--exp_label	example_full_tissues
+--eGenes_Directory	
+
+Output and log files will be placed in /gpfs/fs1/home/ahamel/Projects/QTLEnrichV2/QTLEnrich_v2_software_package_Oct2019/Output_QTLEnrich_example_full_tissues_Feb12_2020/
+Preparing gwas
+Preparing confounders and null table...
+This may take a few minutes
+parsing qtls
+computing observed fold-enrichment
+Preparing data for permutations... This may take a few minutes.Tissue_Nerve_TibialRunning with 1000 permutations for 11892 QTLs with an observed fold enrichment of 7.1361...
+Numbers align. No missing variants.
+--- 80.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 11892 QTLs with an observed fold enrichment of 7.1361...
+Numbers align. No missing variants.
+--- 100.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 11892 QTLs with an observed fold enrichment of 7.1361...
+Numbers align. No missing variants.
+--- 332.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 11892
+returning length of matrix: 11892
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Cells_Cultured_fibroblastsRunning with 1000 permutations for 10824 QTLs with an observed fold enrichment of 7.22...
+Numbers align. No missing variants.
+--- 75.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 10824 QTLs with an observed fold enrichment of 7.22...
+Numbers align. No missing variants.
+--- 81.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 10824 QTLs with an observed fold enrichment of 7.22...
+Numbers align. No missing variants.
+--- 296.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 10824
+returning length of matrix: 10824
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_ThyroidRunning with 1000 permutations for 11966 QTLs with an observed fold enrichment of 7.1271...
+Numbers align. No missing variants.
+--- 65.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 11966 QTLs with an observed fold enrichment of 7.1271...
+Numbers align. No missing variants.
+--- 85.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 11966 QTLs with an observed fold enrichment of 7.1271...
+Numbers align. No missing variants.
+--- 303.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 11966
+returning length of matrix: 11966
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_CerebellumRunning with 1000 permutations for 7747 QTLs with an observed fold enrichment of 7.1576...
+Numbers align. No missing variants.
+--- 43.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 7747 QTLs with an observed fold enrichment of 7.1576...
+Numbers align. No missing variants.
+--- 55.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 7747 QTLs with an observed fold enrichment of 7.1576...
+Numbers align. No missing variants.
+--- 194.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 7747
+returning length of matrix: 7747
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_VaginaRunning with 1000 permutations for 2209 QTLs with an observed fold enrichment of 7.1...
+Numbers align. No missing variants.
+--- 9.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 2209 QTLs with an observed fold enrichment of 7.1...
+Numbers align. No missing variants.
+--- 13.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 2209 QTLs with an observed fold enrichment of 7.1...
+Numbers align. No missing variants.
+--- 51.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 2209
+returning length of matrix: 2209
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Colon_TransverseRunning with 1000 permutations for 7870 QTLs with an observed fold enrichment of 6.9695...
+Numbers align. No missing variants.
+--- 36.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 7870 QTLs with an observed fold enrichment of 6.9695...
+Numbers align. No missing variants.
+--- 49.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 7870 QTLs with an observed fold enrichment of 6.9695...
+Numbers align. No missing variants.
+--- 188.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 7870
+returning length of matrix: 7870
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Skin_Sun_Exposed_Lower_legRunning with 1000 permutations for 11618 QTLs with an observed fold enrichment of 6.9776...
+Numbers align. No missing variants.
+--- 46.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 11618 QTLs with an observed fold enrichment of 6.9776...
+Numbers align. No missing variants.
+--- 67.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 11618 QTLs with an observed fold enrichment of 6.9776...
+Numbers align. No missing variants.
+--- 282.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 11618
+returning length of matrix: 11618
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_ProstateRunning with 1000 permutations for 4722 QTLs with an observed fold enrichment of 7.0975...
+Numbers align. No missing variants.
+--- 18.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 4722 QTLs with an observed fold enrichment of 7.0975...
+Numbers align. No missing variants.
+--- 26.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 4722 QTLs with an observed fold enrichment of 7.0975...
+Numbers align. No missing variants.
+--- 110.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 4722
+returning length of matrix: 4722
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_UterusRunning with 1000 permutations for 2191 QTLs with an observed fold enrichment of 7.1909...
+Numbers align. No missing variants.
+--- 9.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 2191 QTLs with an observed fold enrichment of 7.1909...
+Numbers align. No missing variants.
+--- 12.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 2191 QTLs with an observed fold enrichment of 7.1909...
+Numbers align. No missing variants.
+--- 51.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 2191
+returning length of matrix: 2191
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Whole_BloodRunning with 1000 permutations for 8816 QTLs with an observed fold enrichment of 7.1156...
+Numbers align. No missing variants.
+--- 35.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 8816 QTLs with an observed fold enrichment of 7.1156...
+Numbers align. No missing variants.
+--- 49.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 8816 QTLs with an observed fold enrichment of 7.1156...
+Numbers align. No missing variants.
+--- 219.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 8816
+returning length of matrix: 8816
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_PancreasRunning with 1000 permutations for 6958 QTLs with an observed fold enrichment of 7.158...
+Numbers align. No missing variants.
+--- 33.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 6958 QTLs with an observed fold enrichment of 7.158...
+Numbers align. No missing variants.
+--- 45.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 6958 QTLs with an observed fold enrichment of 7.158...
+Numbers align. No missing variants.
+--- 181.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 6958
+returning length of matrix: 6958
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_StomachRunning with 1000 permutations for 6001 QTLs with an observed fold enrichment of 7.26...
+Numbers align. No missing variants.
+--- 24.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 6001 QTLs with an observed fold enrichment of 7.26...
+Numbers align. No missing variants.
+--- 33.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 6001 QTLs with an observed fold enrichment of 7.26...
+Numbers align. No missing variants.
+--- 141.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 6001
+returning length of matrix: 6001
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_Cerebellar_HemisphereRunning with 1000 permutations for 6750 QTLs with an observed fold enrichment of 6.9379...
+Numbers align. No missing variants.
+--- 27.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 6750 QTLs with an observed fold enrichment of 6.9379...
+Numbers align. No missing variants.
+--- 37.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 6750 QTLs with an observed fold enrichment of 6.9379...
+Numbers align. No missing variants.
+--- 158.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 6750
+returning length of matrix: 6750
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Skin_Not_Sun_Exposed_SuprapubicRunning with 1000 permutations for 10630 QTLs with an observed fold enrichment of 7.0244...
+Numbers align. No missing variants.
+--- 42.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 10630 QTLs with an observed fold enrichment of 7.0244...
+Numbers align. No missing variants.
+--- 59.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 10630 QTLs with an observed fold enrichment of 7.0244...
+Numbers align. No missing variants.
+--- 267.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 10630
+returning length of matrix: 10630
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Breast_Mammary_TissueRunning with 1000 permutations for 7332 QTLs with an observed fold enrichment of 7.267...
+Numbers align. No missing variants.
+--- 31.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 7332 QTLs with an observed fold enrichment of 7.267...
+Numbers align. No missing variants.
+--- 40.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 7332 QTLs with an observed fold enrichment of 7.267...
+Numbers align. No missing variants.
+--- 181.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 7332
+returning length of matrix: 7332
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Adipose_SubcutaneousRunning with 1000 permutations for 10742 QTLs with an observed fold enrichment of 7.1993...
+Numbers align. No missing variants.
+--- 43.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 10742 QTLs with an observed fold enrichment of 7.1993...
+Numbers align. No missing variants.
+--- 59.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 10742 QTLs with an observed fold enrichment of 7.1993...
+Numbers align. No missing variants.
+--- 271.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 10742
+returning length of matrix: 10742
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_SpleenRunning with 1000 permutations for 7231 QTLs with an observed fold enrichment of 6.826...
+Numbers align. No missing variants.
+--- 28.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 7231 QTLs with an observed fold enrichment of 6.826...
+Numbers align. No missing variants.
+--- 39.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 7231 QTLs with an observed fold enrichment of 6.826...
+Numbers align. No missing variants.
+--- 171.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 7231
+returning length of matrix: 7231
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Artery_TibialRunning with 1000 permutations for 10632 QTLs with an observed fold enrichment of 7.2744...
+Numbers align. No missing variants.
+--- 40.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 10632 QTLs with an observed fold enrichment of 7.2744...
+Numbers align. No missing variants.
+--- 57.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 10632 QTLs with an observed fold enrichment of 7.2744...
+Numbers align. No missing variants.
+--- 260.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 10632
+returning length of matrix: 10632
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Esophagus_MucosaRunning with 1000 permutations for 10339 QTLs with an observed fold enrichment of 6.971...
+Numbers align. No missing variants.
+--- 37.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 10339 QTLs with an observed fold enrichment of 6.971...
+Numbers align. No missing variants.
+--- 53.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 10339 QTLs with an observed fold enrichment of 6.971...
+Numbers align. No missing variants.
+--- 255.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 10339
+returning length of matrix: 10339
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_OvaryRunning with 1000 permutations for 3653 QTLs with an observed fold enrichment of 7.5246...
+Numbers align. No missing variants.
+--- 14.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 3653 QTLs with an observed fold enrichment of 7.5246...
+Numbers align. No missing variants.
+--- 19.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 3653 QTLs with an observed fold enrichment of 7.5246...
+Numbers align. No missing variants.
+--- 87.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 3653
+returning length of matrix: 3653
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_Caudate_basal_gangliaRunning with 1000 permutations for 5806 QTLs with an observed fold enrichment of 6.9517...
+Numbers align. No missing variants.
+--- 22.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 5806 QTLs with an observed fold enrichment of 6.9517...
+Numbers align. No missing variants.
+--- 32.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 5806 QTLs with an observed fold enrichment of 6.9517...
+Numbers align. No missing variants.
+--- 139.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 5806
+returning length of matrix: 5806
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_HypothalamusRunning with 1000 permutations for 3728 QTLs with an observed fold enrichment of 7.1129...
+Numbers align. No missing variants.
+--- 15.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 3728 QTLs with an observed fold enrichment of 7.1129...
+Numbers align. No missing variants.
+--- 20.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 3728 QTLs with an observed fold enrichment of 7.1129...
+Numbers align. No missing variants.
+--- 89.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 3728
+returning length of matrix: 3728
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Artery_AortaRunning with 1000 permutations for 8855 QTLs with an observed fold enrichment of 7.3792...
+Numbers align. No missing variants.
+--- 32.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 8855 QTLs with an observed fold enrichment of 7.3792...
+Numbers align. No missing variants.
+--- 48.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 8855 QTLs with an observed fold enrichment of 7.3792...
+Numbers align. No missing variants.
+--- 218.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 8855
+returning length of matrix: 8855
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_LiverRunning with 1000 permutations for 3888 QTLs with an observed fold enrichment of 7.0928...
+Numbers align. No missing variants.
+--- 14.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 3888 QTLs with an observed fold enrichment of 7.0928...
+Numbers align. No missing variants.
+--- 19.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 3888 QTLs with an observed fold enrichment of 7.0928...
+Numbers align. No missing variants.
+--- 87.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 3888
+returning length of matrix: 3888
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Heart_Left_VentricleRunning with 1000 permutations for 7057 QTLs with an observed fold enrichment of 7.2153...
+Numbers align. No missing variants.
+--- 25.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 7057 QTLs with an observed fold enrichment of 7.2153...
+Numbers align. No missing variants.
+--- 35.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 7057 QTLs with an observed fold enrichment of 7.2153...
+Numbers align. No missing variants.
+--- 157.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 7057
+returning length of matrix: 7057
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Muscle_SkeletalRunning with 1000 permutations for 9786 QTLs with an observed fold enrichment of 7.2536...
+Numbers align. No missing variants.
+--- 36.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 9786 QTLs with an observed fold enrichment of 7.2536...
+Numbers align. No missing variants.
+--- 49.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 9786 QTLs with an observed fold enrichment of 7.2536...
+Numbers align. No missing variants.
+--- 223.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 9786
+returning length of matrix: 9786
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Heart_Atrial_AppendageRunning with 1000 permutations for 7758 QTLs with an observed fold enrichment of 7.1701...
+Numbers align. No missing variants.
+--- 27.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 7758 QTLs with an observed fold enrichment of 7.1701...
+Numbers align. No missing variants.
+--- 37.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 7758 QTLs with an observed fold enrichment of 7.1701...
+Numbers align. No missing variants.
+--- 159.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 7758
+returning length of matrix: 7758
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Esophagus_Gastroesophageal_JunctionRunning with 1000 permutations for 7323 QTLs with an observed fold enrichment of 7.2377...
+Numbers align. No missing variants.
+--- 26.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 7323 QTLs with an observed fold enrichment of 7.2377...
+Numbers align. No missing variants.
+--- 36.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 7323 QTLs with an observed fold enrichment of 7.2377...
+Numbers align. No missing variants.
+--- 153.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 7323
+returning length of matrix: 7323
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_HippocampusRunning with 1000 permutations for 3814 QTLs with an observed fold enrichment of 6.9005...
+Numbers align. No missing variants.
+--- 14.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 3814 QTLs with an observed fold enrichment of 6.9005...
+Numbers align. No missing variants.
+--- 19.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 3814 QTLs with an observed fold enrichment of 6.9005...
+Numbers align. No missing variants.
+--- 79.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 3814
+returning length of matrix: 3814
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_TestisRunning with 1000 permutations for 11889 QTLs with an observed fold enrichment of 6.5101...
+Numbers align. No missing variants.
+--- 53.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 11889 QTLs with an observed fold enrichment of 6.5101...
+Numbers align. No missing variants.
+--- 68.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 11889 QTLs with an observed fold enrichment of 6.5101...
+Numbers align. No missing variants.
+--- 265.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 11889
+returning length of matrix: 11889
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Adipose_Visceral_OmentumRunning with 1000 permutations for 8653 QTLs with an observed fold enrichment of 7.0947...
+Numbers align. No missing variants.
+--- 32.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 8653 QTLs with an observed fold enrichment of 7.0947...
+Numbers align. No missing variants.
+--- 42.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 8653 QTLs with an observed fold enrichment of 7.0947...
+Numbers align. No missing variants.
+--- 192.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 8653
+returning length of matrix: 8653
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Artery_CoronaryRunning with 1000 permutations for 4229 QTLs with an observed fold enrichment of 7.3886...
+Numbers align. No missing variants.
+--- 15.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 4229 QTLs with an observed fold enrichment of 7.3886...
+Numbers align. No missing variants.
+--- 21.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 4229 QTLs with an observed fold enrichment of 7.3886...
+Numbers align. No missing variants.
+--- 89.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 4229
+returning length of matrix: 4229
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_Substantia_nigraRunning with 1000 permutations for 2212 QTLs with an observed fold enrichment of 6.991...
+Numbers align. No missing variants.
+--- 8.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 2212 QTLs with an observed fold enrichment of 6.991...
+Numbers align. No missing variants.
+--- 12.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 2212 QTLs with an observed fold enrichment of 6.991...
+Numbers align. No missing variants.
+--- 46.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 2212
+returning length of matrix: 2212
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_Putamen_basal_gangliaRunning with 1000 permutations for 4906 QTLs with an observed fold enrichment of 7.1347...
+Numbers align. No missing variants.
+--- 18.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 4906 QTLs with an observed fold enrichment of 7.1347...
+Numbers align. No missing variants.
+--- 25.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 4906 QTLs with an observed fold enrichment of 7.1347...
+Numbers align. No missing variants.
+--- 106.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 4906
+returning length of matrix: 4906
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_LungRunning with 1000 permutations for 9622 QTLs with an observed fold enrichment of 6.9938...
+Numbers align. No missing variants.
+--- 34.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 9622 QTLs with an observed fold enrichment of 6.9938...
+Numbers align. No missing variants.
+--- 47.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 9622 QTLs with an observed fold enrichment of 6.9938...
+Numbers align. No missing variants.
+--- 215.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 9622
+returning length of matrix: 9622
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Cells_EBV-transformed_lymphocytesRunning with 1000 permutations for 3271 QTLs with an observed fold enrichment of 7.25...
+Numbers align. No missing variants.
+--- 12.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 3271 QTLs with an observed fold enrichment of 7.25...
+Numbers align. No missing variants.
+--- 16.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 3271 QTLs with an observed fold enrichment of 7.25...
+Numbers align. No missing variants.
+--- 69.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 3271
+returning length of matrix: 3271
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Small_Intestine_Terminal_IleumRunning with 1000 permutations for 4257 QTLs with an observed fold enrichment of 7.0939...
+Numbers align. No missing variants.
+--- 15.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 4257 QTLs with an observed fold enrichment of 7.0939...
+Numbers align. No missing variants.
+--- 22.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 4257 QTLs with an observed fold enrichment of 7.0939...
+Numbers align. No missing variants.
+--- 89.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 4257
+returning length of matrix: 4257
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Adrenal_GlandRunning with 1000 permutations for 5621 QTLs with an observed fold enrichment of 7.3559...
+Numbers align. No missing variants.
+--- 21.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 5621 QTLs with an observed fold enrichment of 7.3559...
+Numbers align. No missing variants.
+--- 29.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 5621 QTLs with an observed fold enrichment of 7.3559...
+Numbers align. No missing variants.
+--- 121.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 5621
+returning length of matrix: 5621
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Minor_Salivary_GlandRunning with 1000 permutations for 3104 QTLs with an observed fold enrichment of 7.0129...
+Numbers align. No missing variants.
+--- 11.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 3104 QTLs with an observed fold enrichment of 7.0129...
+Numbers align. No missing variants.
+--- 15.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 3104 QTLs with an observed fold enrichment of 7.0129...
+Numbers align. No missing variants.
+--- 64.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 3104
+returning length of matrix: 3104
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_Spinal_cord_cervical_c-1Running with 1000 permutations for 3074 QTLs with an observed fold enrichment of 6.8182...
+Numbers align. No missing variants.
+--- 11.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 3074 QTLs with an observed fold enrichment of 6.8182...
+Numbers align. No missing variants.
+--- 15.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 3074 QTLs with an observed fold enrichment of 6.8182...
+Numbers align. No missing variants.
+--- 64.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 3074
+returning length of matrix: 3074
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Kidney_CortexRunning with 1000 permutations for 774 QTLs with an observed fold enrichment of 7.2564...
+Numbers align. No missing variants.
+--- 3.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 774 QTLs with an observed fold enrichment of 7.2564...
+Numbers align. No missing variants.
+--- 4.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 774 QTLs with an observed fold enrichment of 7.2564...
+Numbers align. No missing variants.
+--- 16.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 774
+returning length of matrix: 774
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_AmygdalaRunning with 1000 permutations for 2474 QTLs with an observed fold enrichment of 6.9435...
+Numbers align. No missing variants.
+--- 9.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 2474 QTLs with an observed fold enrichment of 6.9435...
+Numbers align. No missing variants.
+--- 12.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 2474 QTLs with an observed fold enrichment of 6.9435...
+Numbers align. No missing variants.
+--- 51.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 2474
+returning length of matrix: 2474
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_Nucleus_accumbens_basal_gangliaRunning with 1000 permutations for 5545 QTLs with an observed fold enrichment of 6.8989...
+Numbers align. No missing variants.
+--- 20.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 5545 QTLs with an observed fold enrichment of 6.8989...
+Numbers align. No missing variants.
+--- 27.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 5545 QTLs with an observed fold enrichment of 6.8989...
+Numbers align. No missing variants.
+--- 122.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 5545
+returning length of matrix: 5545
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_Frontal_Cortex_BA9Running with 1000 permutations for 5057 QTLs with an observed fold enrichment of 6.8142...
+Numbers align. No missing variants.
+--- 18.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 5057 QTLs with an observed fold enrichment of 6.8142...
+Numbers align. No missing variants.
+--- 25.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 5057 QTLs with an observed fold enrichment of 6.8142...
+Numbers align. No missing variants.
+--- 111.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 5057
+returning length of matrix: 5057
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_Anterior_cingulate_cortex_BA24Running with 1000 permutations for 3819 QTLs with an observed fold enrichment of 6.5393...
+Numbers align. No missing variants.
+--- 15.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 3819 QTLs with an observed fold enrichment of 6.5393...
+Numbers align. No missing variants.
+--- 20.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 3819 QTLs with an observed fold enrichment of 6.5393...
+Numbers align. No missing variants.
+--- 84.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 3819
+returning length of matrix: 3819
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Esophagus_MuscularisRunning with 1000 permutations for 9920 QTLs with an observed fold enrichment of 7.2157...
+Numbers align. No missing variants.
+--- 36.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 9920 QTLs with an observed fold enrichment of 7.2157...
+Numbers align. No missing variants.
+--- 50.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 9920 QTLs with an observed fold enrichment of 7.2157...
+Numbers align. No missing variants.
+--- 221.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 9920
+returning length of matrix: 9920
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Brain_CortexRunning with 1000 permutations for 6274 QTLs with an observed fold enrichment of 7.0382...
+Numbers align. No missing variants.
+--- 24.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 6274 QTLs with an observed fold enrichment of 7.0382...
+Numbers align. No missing variants.
+--- 32.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 6274 QTLs with an observed fold enrichment of 7.0382...
+Numbers align. No missing variants.
+--- 132.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 6274
+returning length of matrix: 6274
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_Colon_SigmoidRunning with 1000 permutations for 7167 QTLs with an observed fold enrichment of 7.1564...
+Numbers align. No missing variants.
+--- 25.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 7167 QTLs with an observed fold enrichment of 7.1564...
+Numbers align. No missing variants.
+--- 35.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 7167 QTLs with an observed fold enrichment of 7.1564...
+Numbers align. No missing variants.
+--- 152.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 7167
+returning length of matrix: 7167
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Tissue_PituitaryRunning with 1000 permutations for 6020 QTLs with an observed fold enrichment of 7.1262...
+Numbers align. No missing variants.
+--- 23.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 10000 permutations for 6020 QTLs with an observed fold enrichment of 7.1262...
+Numbers align. No missing variants.
+--- 31.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+Running with 100000 permutations for 6020 QTLs with an observed fold enrichment of 7.1262...
+Numbers align. No missing variants.
+--- 128.0 seconds ---
+lower threshold of permutations >= observed_fold_enrichment not reached.
+Multiplying number of permutations by 10.
+upper boundary of number of permutations reached or exceeded. Returning p-value-matrix.
+returning length of null matrix: 6020
+returning length of matrix: 6020
+ computing enrichment p-value, adjusted fold-enrichment, confidence intervals, and pi1Creating QTLEnrich output table. QTLEnrich is complete.
