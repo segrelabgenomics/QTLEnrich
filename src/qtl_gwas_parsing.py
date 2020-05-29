@@ -235,6 +235,7 @@ def parse_interaction_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",
 
     qtl_set_rename = rename_variant(qtl_set)
     qtl_set_split = split_chromosome_position(qtl_set_rename)
+    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
 
     #subset on protein coding and lincRNAs
     if subset_genes:
@@ -264,7 +265,7 @@ def parse_best_splice_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",
     qtl_set_rename = rename_variant(qtl_set)
     qtl_set_split = split_chromosome_position(qtl_set_rename)
 
-    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+.*)")
+    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
 
     #subset on protein coding and lincRNAs
     if subset_genes:
@@ -289,7 +290,7 @@ def parse_independent_eqtls(qtl_file,tissue,qtl_type,compute_tss_distance=False,
     qtl_set_rename = rename_variant(qtl_set)
     qtl_set_split = split_chromosome_position(qtl_set_rename)
 
-    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+.*)")
+    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
 
     #subset on protein coding and lincRNAs
     if subset_genes:

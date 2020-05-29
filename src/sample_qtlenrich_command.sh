@@ -12,7 +12,7 @@
 # Details of all options can be found in src/README.md
 #
 
-file='../data/GWAS_RESULTS_FILE'
+file='../data/GWASFILE'
 QTL_Directory='../examples/'
 File_Extension='.v8.egenes.txt.gz' # suffix of eGenes file in GTEx v8
 QTL_Type='best_eqtl'
@@ -31,5 +31,4 @@ exp_label='example'
                  --null_table $Null_Table \
                  --gencode_file $gencode_file \
                  --exp_label $exp_label \
-                 --keep_null_variants \
-                 --keep_pvalue_matrix
+                 --GeneEnrich_input

@@ -408,7 +408,6 @@ This is need to extract the list of non-significant genes for the independent QT
 * ``--eGenes_file_name``: File name suffix of the eGenes or sGenes results files in the \-\-eGenes\_directory. Similar to \-\-file\_name option for main set of QTLs.
 Required columns: "gene\_id", "variant\_id", "qval"
 
-
 ## Output Tables Format
 
 **QTLEnrich produces the following output files.** A description of the column headers of all files can be found in: **../qtlenrich_output_header.txt**
@@ -563,7 +562,7 @@ If user is comparing two QTL outputs from **QTLEnrich** (e.g., eQTL and sQTL):
 
 	* ``--identify_significant_cutoff``: Enrichment p-value cutoff for significant tissues (e.g. Enrichemnt P<0.001). If not indicated, default is Bonferroni cutoff (default: 0.05/number of tissues in QTLEnrich output file).
 
-* ``--identify_number_significant_tissues``: If user wants to plot a susbset of top ranked tissues, ranked based on their adjusted fold-enrichment, e.g. first 10 tissues.
+* ``--identify_number_significant_tissues``: If user wants to plot a subset of top ranked tissues, ranked based on their adjusted fold-enrichment, e.g. first 10 tissues.
 
 * ``--remove_subset_tissues``: To exclude specific tissues, include text file with list of tissues to exclude. This file is comprised of one column with header 'Tissue (QTL)' and tissue names should match input QTL files.
 Official GTEx tissue names are listed in: "../data/GTEx\_Tissue\_Names.txt".

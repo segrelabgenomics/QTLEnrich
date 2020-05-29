@@ -466,7 +466,7 @@ boxplot <- ggplot(qtlenrich_files,
                      labels= c(label_file1,label_file2),
                      values = c("#696969","#D3D3D3"),
                     guide=FALSE)+
-  ylim(0,max_limit)
+  ylim(0.5,max_limit)
 
 }
 
@@ -489,7 +489,7 @@ violin_plot <- ggplot(qtlenrich_file1_parsed,
                      labels= c(label_file1),
                      values = c("#696969"),
                     guide=FALSE)+
-  ylim(0,max_limit)
+  ylim(0.5,max_limit)
 return(violin_plot)
 }
 
@@ -514,7 +514,7 @@ violinplot <- ggplot(qtlenrich_files,
                      labels= c(label_file1,label_file2),
                      values = c("#696969","#D3D3D3"),
                     guide=FALSE)+
-  ylim(0,max_limit)
+  ylim(0.5,max_limit)
 
 }
 

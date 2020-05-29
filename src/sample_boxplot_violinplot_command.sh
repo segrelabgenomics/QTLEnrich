@@ -23,8 +23,6 @@ significant_cutoff=0.00051 # Bonferroni	correction for number of tissues tested 
 
 # load R package
 
-module load R/3.6.1
-
 ./forest_boxplot_module.R --qtlenrich_file1 $qtlenrich_file \
                               --label_file1 $label \
                               --qtlenrich_file2 $qtlenrich_file2 \
@@ -34,5 +32,6 @@ module load R/3.6.1
                               --gtex_tissue_names $gtex_tissue_names_file \
                               --remove_subset_tissues $remove_subset_tissues \
                               --exp_label $exp_label \
-                              --box_plot \
+                              --bar_box_violin_option "adjusted_fold" \
+                              --violin_plot \
                               --paired_plot

@@ -46,7 +46,7 @@ def parse_egenes_set(tissue_name,eGenes_directory,eGene_file_name,gwas,q=0.05,p=
     qtl_set_rename = qtl_gwas_parsing.rename_variant(qtl_set)
     qtl_set_split = qtl_gwas_parsing.split_chromosome_position(qtl_set_rename)
 
-    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+.*)")
+    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
 
     #subset on protein coding and lincRNAs
     if subset_genes:
@@ -113,7 +113,7 @@ def parse_null_variants(qtl_set,significant_qtl_set,q=0.05,p=0.05):
     defined as: genes with q-value above significant cutoff whose best QTL has GWAS p-value above cutoff
     """
     if "qval" in qtl_set:
-        qtl_set = qtl_set.loc[null_qtl_set.loc["qval"] > q].copy()
+        qtl_set = qtl_set.loc[qtl_set["qval"] > q].copy()
 
     qtl_set = qtl_set.loc[qtl_set["gwas_p_value"]>p].copy()
     qtl_set = qtl_set[["gene_id"]].copy()
