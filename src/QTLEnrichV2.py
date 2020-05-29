@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
     gencode = qtl_gwas_parsing.declare_gencode(args)
 
-    significant_qtl_dict,significant_qtl_gwas_dict,geneenrich_input_gwas_dict = qtl_gwas_parsing.parse_qtls(output_files_directory,month_date,gwas_trait,qtl_files,args.qtl_directory,args.qtl_type,args.file_name,gwas,args.qtl_q_value,args.independent_ranking,args.compute_tss_distance,gencode,args.subset_genes,args.null_option)
+    significant_qtl_dict,significant_qtl_gwas_dict,geneenrich_input_gwas_dict = qtl_gwas_parsing.parse_qtls(output_files_directory,month_date,gwas_trait,qtl_files,args.qtl_directory,args.qtl_type,args.file_name,gwas,args.qtl_q_value,args.independent_ranking,args.compute_tss_distance,gencode,args.subset_genes,args.null_option,keep_gene_id_suffix)
 
     #Generate GeneEnrich Inputs if necessary
     if args.GeneEnrich_input:

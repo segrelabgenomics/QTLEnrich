@@ -363,6 +363,8 @@ We precomputed this file for GTEx release v8: **GTEx_v8_Confounders_Table_49Tiss
 
 * ``--subset_genes``: indicate if user wishes to subset on protein coding and lincRNA genes. Requires \-\-gencode\_file (default: True).
 
+* ``--keep_gene_id_suffix``: indicate if user wishes to keep decimal version suffix on ENSEMBL gene ids (default: True).
+
 * ``--compute_tss_distance``: indicate if user wishes QTLEnrich to compute TSS distance for significant QTLs. Requires \-\-gencode\_file (default: True).
 
 * ``--gencode_file``: gencode_file used for computing TSS distance for significant QTLs and their target gene, and for subsetting on protein coding and lincRNAs genes. This file is provided for GENCODE v26 which is compatible with GTEx v8 (/data/GENCODE_26_df.txt).

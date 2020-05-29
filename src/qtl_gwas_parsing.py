@@ -161,7 +161,7 @@ def split_chromosome_position(df):
     df["pos"] = df["pos"].astype(int)
     return(df)
 
-def format_gencode(gencode):
+def format_gencode(gencode,keep_gene_id_suffix=True):
     """
     Prepare gencode file to merge with retina eqtl file
     """
@@ -172,7 +172,10 @@ def format_gencode(gencode):
 
     #extract relevant columns
     gencode_df_gene = gencode_df_gene[["gene_id","start","end","strand","gene_type"]]
-    gencode_df_gene["gene_id"] = gencode_df_gene["gene_id"].str.extract(r".*(ENSG\d+)")
+    if keep_gene_id_suffix:
+        gencode_df_gene["gene_id"] = gencode_df_gene["gene_id"].str.extract(r".*(ENSG\d+.*)")
+    else:
+        gencode_df_gene["gene_id"] = gencode_df_gene["gene_id"].str.extract(r".*(ENSG\d+)")
     gencode_df_gene = gencode_df_gene.rename(columns = {"start":"gene_start","end":"gene_end"})
 
     return(gencode_df_gene)
@@ -222,7 +225,7 @@ def perform_tss_distance_computation(qtl_set,tissue,gencode,null_option):
 
     return(gencode_qtl_full)
 
-def parse_interaction_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",subset_genes=False,null_option="tissue_dependent"):
+def parse_interaction_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",subset_genes=False,null_option="tissue_dependent",keep_gene_id_suffix=True):
     """
     parses qtls for ieqtls per eGene and isqtls
     If pval_adj_bh is not present, then qval column is not taken.
@@ -235,7 +238,11 @@ def parse_interaction_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",
 
     qtl_set_rename = rename_variant(qtl_set)
     qtl_set_split = split_chromosome_position(qtl_set_rename)
-    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
+
+    if keep_gene_id_suffix:
+        qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+.*)")
+    else:
+        qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
 
     #subset on protein coding and lincRNAs
     if subset_genes:
@@ -247,7 +254,7 @@ def parse_interaction_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",
 
     return(qtl_set_split,qtl_set_split)
 
-def parse_best_splice_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",subset_genes=False,null_option="tissue_dependent"):
+def parse_best_splice_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",subset_genes=False,null_option="tissue_dependent",keep_gene_id_suffix=True):
     """
     parses qtls for best eqtl per eGene and sqtls
 
@@ -265,7 +272,10 @@ def parse_best_splice_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",
     qtl_set_rename = rename_variant(qtl_set)
     qtl_set_split = split_chromosome_position(qtl_set_rename)
 
-    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
+    if keep_gene_id_suffix:
+        qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+.*)")
+    else:
+        qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
 
     #subset on protein coding and lincRNAs
     if subset_genes:
@@ -276,7 +286,7 @@ def parse_best_splice_qtls(qtl_set,tissue,compute_tss_distance=False,gencode="",
         qtl_set_split = perform_tss_distance_computation(qtl_set_split,tissue,gencode,null_option)
     return(qtl_set_split,qtl_set_split)
 
-def parse_independent_eqtls(qtl_file,tissue,qtl_type,compute_tss_distance=False,gencode="",subset_genes=False,null_option="tissue_dependent"):
+def parse_independent_eqtls(qtl_file,tissue,qtl_type,compute_tss_distance=False,gencode="",subset_genes=False,null_option="tissue_dependent",keep_gene_id_suffix=True):
     """
     parses independent eqtls.
 
@@ -290,7 +300,10 @@ def parse_independent_eqtls(qtl_file,tissue,qtl_type,compute_tss_distance=False,
     qtl_set_rename = rename_variant(qtl_set)
     qtl_set_split = split_chromosome_position(qtl_set_rename)
 
-    qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
+    if keep_gene_id_suffix:
+        qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+.*)")
+    else:
+        qtl_set_split["gene_id"] = qtl_set_split["gene_id"].str.extract(r".*(ENSG\d+)")
 
     #subset on protein coding and lincRNAs
     if subset_genes:
@@ -391,7 +404,7 @@ def merge_with_gwas(date,gwas_file,qtl,tissue,qtl_type,trait,output_files_direct
     print_gwas_pvalues(date,qtl_gwas,tissue,qtl_type,trait,output_files_directory,independent_ranking)
     return(qtl_gwas)
 
-def parse_qtls(output_files_directory,date,trait,qtl_files,qtl_directory,qtl_type,file_name,gwas,q_value=0.05,independent_ranking=1,compute_tss_distance=False,gencode="",subset_genes=False,null_option="tissue_dependent"):
+def parse_qtls(output_files_directory,date,trait,qtl_files,qtl_directory,qtl_type,file_name,gwas,q_value=0.05,independent_ranking=1,compute_tss_distance=False,gencode="",subset_genes=False,null_option="tissue_dependent",keep_gene_id_suffix=True):
     """
     parses qtl files before performing random sampling on null variants from matched confounder bins.
 
@@ -431,7 +444,7 @@ def parse_qtls(output_files_directory,date,trait,qtl_files,qtl_directory,qtl_typ
         #parse qtl by type
         #best/splice
         if qtl_type == "best_eqtl" or qtl_type == "best_sqtl":
-            geneenrich_input_dict[tissue_name],qtl_dict[tissue_name] = parse_best_splice_qtls(qtl_file,tissue,compute_tss_distance,gencode,subset_genes,null_option)
+            geneenrich_input_dict[tissue_name],qtl_dict[tissue_name] = parse_best_splice_qtls(qtl_file,tissue,compute_tss_distance,gencode,subset_genes,null_option,keep_gene_id_suffix)
 
             geneenrich_input_gwas_dict[tissue_name] = merge_with_gwas(date,gwas,geneenrich_input_dict[tissue_name],tissue,qtl_type,trait,output_files_directory,independent_ranking)
 
@@ -440,7 +453,7 @@ def parse_qtls(output_files_directory,date,trait,qtl_files,qtl_directory,qtl_typ
             significant_qtl_gwas_dict[tissue_name] = merge_with_gwas(date,gwas,significant_qtl_dict[tissue_name],tissue,qtl_type,trait,output_files_directory,independent_ranking)
 
         elif qtl_type == "ieqtl" or qtl_type == "isqtl":
-            geneenrich_input_dict[tissue_name],qtl_dict[tissue_name] = parse_interaction_qtls(qtl_file,tissue,compute_tss_distance,gencode,subset_genes,null_option)
+            geneenrich_input_dict[tissue_name],qtl_dict[tissue_name] = parse_interaction_qtls(qtl_file,tissue,compute_tss_distance,gencode,subset_genes,null_option,keep_gene_id_suffix)
 
             geneenrich_input_gwas_dict[tissue_name] = merge_with_gwas(date,gwas,geneenrich_input_dict[tissue_name],tissue,qtl_type,trait,output_files_directory,independent_ranking)
 
@@ -449,7 +462,7 @@ def parse_qtls(output_files_directory,date,trait,qtl_files,qtl_directory,qtl_typ
             significant_qtl_gwas_dict[tissue_name] = merge_with_gwas(date,gwas,significant_qtl_dict[tissue_name],tissue,qtl_type,trait,output_files_directory,independent_ranking)
         #independent
         elif qtl_type == "dapg_independent" or qtl_type == "conditional_independent":
-            geneenrich_input_dict[tissue_name],qtl_dict[tissue_name] = parse_independent_eqtls(qtl_file,tissue,qtl_type,compute_tss_distance,gencode,subset_genes,null_option)
+            geneenrich_input_dict[tissue_name],qtl_dict[tissue_name] = parse_independent_eqtls(qtl_file,tissue,qtl_type,compute_tss_distance,gencode,subset_genes,null_option,keep_gene_id_suffix)
             geneenrich_input_gwas_dict[tissue_name] = merge_with_gwas(date,gwas,geneenrich_input_dict[tissue_name],tissue,qtl_type,trait,output_files_directory,independent_ranking)
             significant_qtl_dict[tissue_name]=extract_significant_independent_qtls(qtl_dict[tissue_name],tissue,independent_ranking,qtl_type,compute_tss_distance)
             significant_qtl_gwas_dict[tissue_name] = merge_with_gwas(date,gwas,significant_qtl_dict[tissue_name],tissue,qtl_type,trait,output_files_directory,independent_ranking)

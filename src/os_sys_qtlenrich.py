@@ -29,6 +29,7 @@ def parse_args():
     parser.add_argument("-s","--subset_genes",action="store_false",help="Indicate if user wishes to subset on protein coding and lincRNA genes.")
     parser.add_argument("-c","--compute_tss_distance",action="store_false",help="Indicate if user wishes qtlEnrich to compute distance.")
     parser.add_argument("-g","--gencode_file",type=str,help="gencode_file used for computing tss distance.")
+    parser.add_argument("--keep_gene_id_suffix",action="store_true",help="Option to keep the decimal version suffix on gene ids.")
     parser.add_argument("--null_option",type=str,default = "tissue_dependent",help="Global or tissue_dependent")
     parser.add_argument("-B","--genome_build", type=str,default="b38",help = "Indicate genome build: b37 or b38.")
     parser.add_argument("--trait_name",type=str,help="Name of trait in analysis. Default takes GWAS file name.")
