@@ -29,7 +29,7 @@ def extract_tissue_files(directory,file_name):
     """
     return list of files in directory
     """
-    return([file for file in os.listdir(directory) if file.endswith(file_name)]
+    return([file for file in os.listdir(directory) if file.endswith(file_name)])
 
 def extract_unique_variants(directory,tissue_files):
     """
@@ -75,7 +75,7 @@ if __name__ == "__main__":
     tissue_files = extract_tissue_files(args.directory,args.file_name)
 
     #obtain unique variants from tissue files
-    unique_variants = extract_unique_variants(directory,tissue_files)
+    unique_variants = extract_unique_variants(args.directory,tissue_files)
 
     #write to file
     unique_variants.to_csv(args.output_file,header=True,sep="\t",index=None)
