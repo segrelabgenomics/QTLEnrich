@@ -46,7 +46,7 @@ def generate_null_variants(all_variants_file,significant_variants_file):
     significant_variants_df = drop_duplicates(significant_variants_df) 
 
     null_variants = all_variants_df.loc[~all_variants_df["variant"].isin(significant_variants_df["variant"])].copy()
-    return(null_df)
+    return(null_variants)
 
 def parse_args():
     """
