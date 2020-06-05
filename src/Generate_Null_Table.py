@@ -12,8 +12,9 @@ Arguments:
     1. Directory
     2. file_extension (files in the directory to be parsed e.g. .allpairs.txt.gz)
     3. Null_Variant_List (global null)
-    4. sQTL significant variants list (here the null variants intersected with significant sQTL variants are in global null)
-    5. Output_File (name of file created with path. If path not included, defaults to current working directory.)
+    4. qtl_significant_variants_option: if present, user will remove additional signficant variants from file in --QTL_Significant_Variants_List)
+    5. QTL_Significant_Variants_List (removes additional significant variants, e.g. from another QTL if added later)
+    6. Output_File (name of file created with path. If path not included, defaults to current working directory.)
 
 Returns:
     1. Null table
