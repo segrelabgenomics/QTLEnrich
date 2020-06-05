@@ -161,7 +161,7 @@ We also provide a shell script for to run *create_null_variants.py*.
 #### 2.4 Generate the null variants table:
 
 ```
-./Generate_Null_Table.py --qtl_directory directory_for_all_pairs_files --File_Extension .allpairs.txt.gz --Null_Variants_List null_variants --QTL_Significant_Variants_List significant_variants_qtl
+./Generate_Null_Table.py --qtl_directory directory_for_all_pairs_files --File_Extension .allpairs.txt.gz --Null_Variants_List null_variants --qtl_significant_variants_option --QTL_Significant_Variants_List significant_variants_qtl
 ```
 
 or run the following shell script:
@@ -179,6 +179,8 @@ or run the following shell script:
 * ``--Null_Variants_List``: unique list of all null variants across all tissues (generated in step 2.3). This file should consist of one column with header "variant\_id". One variant per line.
 
 ##### Optional inputs: 
+
+* ``--qtl_significant_variants_option``: option to remove additional list of significant QTL variants
 
 * ``--QTL_Significant_Variants_List``: additional list of significant QTL variants to remove from the null variant set. This option can be useful if an additional QTL type or QTL tissue is computed at a later stage. This file is in the same format as \-\-Null\_Variants\_List.
 
