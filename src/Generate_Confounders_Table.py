@@ -100,8 +100,6 @@ def Parse_QTL_File(QTL_File,QTL_Directory,Tissue,gencode):
     #extract ensemblID
     QTL['pos'] = QTL['variant_id'].str.split('_',2).str[1].astype(int)
 
-    print(QTL.head())
-
     #computing tss distance
     QTL_computed_tss_distance = Compute_TSS_Distance(QTL,gencode)
 
@@ -118,7 +116,6 @@ def Parse_QTL_File(QTL_File,QTL_Directory,Tissue,gencode):
     print('length after removing duplicates:',len(QTL_computed_tss_distance))
     #rename columns
     #drop Abs_Tss column
-    print(QTL_computed_tss_distance.head())
     QTL_computed_tss_distance = QTL_computed_tss_distance.rename(columns={'variant_id':'variant','TSS_Distance':'TSS_'+Tissue,'maf':'MAF_'+Tissue})
     QTL_computed_tss_distance = QTL_computed_tss_distance.drop(['Abs_tss_distance','gene_id','pos'],axis=1)
     QTL_computed_tss_distance['MAF_'+Tissue] = QTL_computed_tss_distance['MAF_'+Tissue].round(decimals=5)
