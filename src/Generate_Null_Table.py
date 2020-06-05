@@ -39,7 +39,7 @@ def format_variants(significant_variants_file):
     x = pd.read_csv(significant_variants_file,sep='\t')
     return (np.array(x['variant']))
 
-def parse_QTLs(QTL_File,QTL_Directory,Null_Variants_List_Array,Tissue,qtl_significant_variants=""):
+def parse_QTLs(QTL_File,QTL_Directory,Null_Variants_List_Array,Tissue,qtl_significant_variants_option=False,qtl_significant_variants=""):
     """
     Parses .allpairs file 
 
@@ -62,14 +62,14 @@ def parse_QTLs(QTL_File,QTL_Directory,Null_Variants_List_Array,Tissue,qtl_signif
     Null = QTL[QTL['variant'].isin(Null_Variants_List_Array)].copy()
 
     #remove variants found in sQTL list
-    if qtl_significant_variants:
+    if qtl_significant_variants_option:
         print('removing variants found in sQTL list')
         Null = Null[~Null['variant'].isin(qtl_significant_variants)].copy()
 
     #back to dataframe and set those variants to 1
     Null['Tissue_'+Tissue] = 1
 
-    return Null_df
+    return(Null)
 
 def parse_args():
     """
@@ -79,7 +79,8 @@ def parse_args():
     parser.add_argument('-D','--QTL_Directory',type=str,help='Directory containing QTL files to parse',required=True)
     parser.add_argument('-F','--File_Extension',type=str,help='File to extension to parse files in QTL directory',required=True)
     parser.add_argument('--Null_Variants_List',type=str,help='List of null variants',required=True)
-    parser.add_argument('--QTL_Significant_Variants_List',type=str,default="None",help='significant QTL variants')
+    paser.add_argument("--qtl_significant_variants_option",action="store_true")
+    parser.add_argument('--QTL_Significant_Variants_List',type=str,help='significant QTL variants')
     parser.add_argument('-O','--Output_File',type=str,help='Name of generated file',required=True)
 
     return parser.parse_args()
@@ -100,18 +101,18 @@ if __name__ == '__main__':
     Null_Variants_List_Array = np.array(Null_Table_df['variant'])
 
     #Extract significant sQTL variants
-    if args.QTL_Significant_Variants_List != "None":
+    if args.qtl_significant_variants_option:
         significant_variants = format_variants(args.QTL_Significant_Variants_List)
     else:
         significant_variants = ""
 
-    for i in QTL_Files:
+    for tissue_file in QTL_Files:
 
         #extract tissue name
         tissue_name=re.sub(args.File_Extension,'',i)
 
         #Determine null variants for each tissue
-        Null_df = parse_QTLs(i,args.QTL_Directory,Null_Variants_List_Array,tissue_name,qtl_significant_variants=significant_variants)
+        Null_df = parse_QTLs(tissue_file,args.QTL_Directory,Null_Variants_List_Array,tissue_name,qtl_significant_variants=significant_variants)
 
         #merge with Null_Table_df
         Null_Table_df = pd.merge(Null_Table_df,Null_df,on=['variant'],how='outer')
