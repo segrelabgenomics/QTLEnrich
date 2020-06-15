@@ -132,8 +132,8 @@ def compute_pi1(null_p_value_matrix,qtl_set,lambda_factor=0.8):
         else:
             pi1 = round((1-pi0),4) 
     else:
-        pi1 = np.nan
-
+        #pi1 = np.nan
+        pi1 = 0
     #compute estimated # true trait associations
     true_trait = compute_true_trait(pi1,qtl_set)
     return(pi1,true_trait)
